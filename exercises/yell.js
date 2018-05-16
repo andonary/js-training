@@ -1,14 +1,16 @@
-'use strict'
+"use strict";
 
 /*
  * Create a `yell` function that takes a string
  * and return the same string in upper case
  *
  */
-
+const yell = string => string.toUpperCase();
 
 //* Begin of tests
-const assert = require('assert')
-
-assert.fail('You must write your own tests')
+const assert = require("assert");
+assert.strictEqual(typeof yell, "function");
+assert.strictEqual(yell.length, 1);
+assert.strictEqual(yell("minuscule"), "MINUSCULE");
+assert.strictEqual(yell("Salut ca va?"), "SALUT CA VA?");
 // End of tests */

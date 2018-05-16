@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
  * Create a `repeat` function that takes a string and a number as parameters
@@ -8,15 +8,23 @@
  *
  */
 
-//* Begin of tests
-const assert = require('assert')
+const repeat = (string, number) => {
+  let accumulator = "";
+  for (let i = 0; i < number; i++) {
+    accumulator += string;
+  }
+  return accumulator;
+};
 
-assert.strictEqual(typeof repeat, 'function')
-assert.strictEqual(repeat.length, 2)
-assert.strictEqual(repeat.toString().includes('.repeat'), false)
-assert.strictEqual(repeat('a', 3), 'aaa')
-assert.strictEqual(repeat('ba', 10), 'babababababababababa')
-assert.strictEqual(repeat('pouet', 2), 'pouetpouet')
-assert.strictEqual(repeat('haha', 1), 'haha')
-assert.strictEqual(repeat('hehehe', 0), '')
+//* Begin of tests
+const assert = require("assert");
+
+assert.strictEqual(typeof repeat, "function");
+assert.strictEqual(repeat.length, 2);
+assert.strictEqual(repeat.toString().includes(".repeat"), false);
+assert.strictEqual(repeat("a", 3), "aaa");
+assert.strictEqual(repeat("ba", 10), "babababababababababa");
+assert.strictEqual(repeat("pouet", 2), "pouetpouet");
+assert.strictEqual(repeat("haha", 1), "haha");
+assert.strictEqual(repeat("hehehe", 0), "");
 // End of tests */

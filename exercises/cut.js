@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
  * Create the `cutFirst` function that takes a string and remove the 2 first characters
@@ -10,8 +10,15 @@
  * https://github.com/nan-academy/refs/blob/master/js-training/methods.md#string---transform
  */
 
+const cutFirst = string => string.substring(2, Infinity);
+const cutLast = string => string.substring(0, string.length - 2);
+const cutFirstLast = string => string.substring(2, string.length - 2);
 //* Begin of tests
-const assert = require('assert')
-
-assert.fail('You must write your own tests')
+const assert = require("assert");
+assert.strictEqual(typeof cutFirst, "function");
+assert.strictEqual(typeof cutLast, "function");
+assert.strictEqual(typeof cutFirstLast, "function");
+assert.strictEqual(cutFirst("toto"), "to");
+assert.strictEqual(cutLast("anti"), "an");
+assert.strictEqual(cutFirstLast("Dimanche"), "manc");
 // End of tests */

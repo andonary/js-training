@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
  * Create a `whisper` function that takes a string
@@ -6,10 +6,12 @@
  * and wrapped by `*`
  *
  */
-
+const whisper = string => "*" + string.toLowerCase() + "*";
 
 //* Begin of tests
-const assert = require('assert')
-
-assert.fail('You must write your own tests')
+const assert = require("assert");
+assert.strictEqual(typeof whisper, "function");
+assert.strictEqual(whisper.length, 1);
+assert.strictEqual(whisper("cadeau"), "*cadeau*");
+assert.strictEqual(whisper("BoNjOuR"), "*bonjour*");
 // End of tests */

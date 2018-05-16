@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
  * Create an object named `circular` that has a property named `circular` with
@@ -9,12 +9,18 @@
 
 // Your code :
 
-//* Begin of tests
-const assert = require('assert')
+// const recursive = arg => {
+//   arg ? { circular: recursive() } : { circular: "circular" };
+// };
+const circular = new Object();
+circular.circular = circular;
 
-assert.strictEqual(typeof circular, 'object')
-assert.strictEqual(circular.circular, circular)
-assert.strictEqual(circular.circular.circular, circular)
-assert.strictEqual(circular.circular.circular.circular, circular)
-assert.strictEqual(circular.circular.circular.circular.circular, circular)
+//* Begin of tests
+const assert = require("assert");
+
+assert.strictEqual(typeof circular, "object");
+assert.strictEqual(circular.circular, circular);
+assert.strictEqual(circular.circular.circular, circular);
+assert.strictEqual(circular.circular.circular.circular, circular);
+assert.strictEqual(circular.circular.circular.circular.circular, circular);
 // End of tests */
